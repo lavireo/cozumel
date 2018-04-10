@@ -1,0 +1,24 @@
+##
+# Misc
+*.DS_Store
+
+##
+# Default dirs
+/tmp
+/log
+/bin
+/dist
+/.bundle
+/.idea
+/.sass-cache
+/yarn-error.log
+/node_modules
+/public/media/*
+/public/static/js/*
+/public/static/img/*
+/public/static/css/*
+
+##
+# Ruby on rails
+Gemfile.lock
+yarn.lock

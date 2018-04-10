@@ -1,0 +1,22 @@
+.list
+{
+  width:   100%;
+  display: table;
+
+  &--row
+  {
+    display: table-row;
+  }
+
+  &--cell
+  {
+    display:        table-cell;
+    white-space:    nowrap;
+    vertical-align: top;
+  }
+
+  &--shrink
+  {
+    width: 1px;
+  }
+}

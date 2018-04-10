@@ -1,0 +1,40 @@
+.display
+{
+  &--line
+  {
+    color:       #525f7f;
+    padding:     0 20px 0 60px;
+    position:    relative;
+    font-size:   14px;
+    font-family: mononoki, Courier New, Courier, monospace;
+    font-weight: 600;
+    line-height: 24px;
+
+    &:before
+    {
+      top:           0;
+      left:          0;
+      width:         40px;
+      color:         #aab7c4;
+      bottom:        0;
+      display:       inline-block;
+      position:      absolute;
+      content:       attr(data-linenumber);
+      text-align:    right;
+      font-family:   mononoki, Courier New, Courier, monospace;
+      padding-right: 16px
+    }
+  }
+
+  &--inner
+  {
+  
+  }
+
+
+  &--null     { color: $yellow }
+  &--number   { color: $orange }
+  &--string   { color: $green }
+  &--boolean  { color: $blue }
+  &--property { color: $purple }
+}

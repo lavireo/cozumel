@@ -1,0 +1,189 @@
+.center
+{
+  margin-left:  auto;
+  margin-right: auto;
+
+  &--vertical
+  {
+    top:               50%;
+    position:          relative;
+
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%)
+  }
+}
+
+.width
+{
+  &--50  { width: 50%; }
+  &--100 { width: 100%; }
+}
+.height
+{
+  &--50  { height: 50%; }
+  &--100 { height: 100%; }
+}
+
+
+.margin
+{
+  $margin-sides:
+    top,
+    left,
+    right,
+    bottom;
+
+  $margin-sizes:
+    xxs 5px,
+    xs  10px,
+    s   15px,
+    m   20px,
+    l   30px,
+    xl  40px;
+
+
+  @each $value in $margin-sizes {
+    &--#{nth($value, 1)}
+    {
+      margin: #{nth($value, 2)};
+    }
+  }
+
+
+  @each $size in $margin-sides {
+    @each $value in $margin-sizes {
+      &--#{$size}--#{nth($value, 1)}
+      {
+        margin-#{$size}: #{nth($value, 2)};
+      }
+    }
+  }
+}
+
+.pad
+{
+  $pad-sides:
+    top,
+    left,
+    right,
+    bottom;
+
+  $pad-sizes:
+    xxs 5px,
+    xs  10px,
+    s   15px,
+    m   20px,
+    l   30px,
+    xl  40px;
+
+
+  @each $value in $pad-sizes {
+    &--#{nth($value, 1)}
+    {
+      padding: #{nth($value, 2)};
+    }
+  }
+
+
+  @each $size in $pad-sides {
+    @each $value in $pad-sizes {
+      &--#{$size}--#{nth($value, 1)}
+      {
+        padding-#{$size}: #{nth($value, 2)};
+      }
+    }
+  }
+}
+
+.border
+{
+  border:        1px solid #e0e6ed;
+  border-radius: 3px;
+
+  &--none
+  {
+    border: 0;
+  }
+
+  $border-sides:
+    top,
+    left,
+    right,
+    bottom;
+
+  @each $side in $border-sides {
+    &--#{$side}
+    {
+      border-#{$side}: 1px solid #e0e6ed;
+    }
+  }
+
+  @each $value in $color-list {
+    &--#{'' + nth($value, 1)}
+    {
+      border-color: #{nth($value, 2)};
+    }
+  }
+}
+.border_radius
+{
+  border-radius: 3px;
+
+  &--top
+  {
+    border-radius: 3px 3px 0 0
+  }
+  &--bottom
+  {
+    border-radius: 0 0 3px 3px
+  }
+}
+
+
+.left
+{
+  float:left;
+}
+.right
+{
+  float:right;
+}
+
+
+.inline
+{
+  display:         flex;
+  flex-direction:  row;
+  justify-content: space-between;
+
+  & > div
+  {
+    flex-shrink: 0;
+  }
+
+  &--flex
+  {
+    flex: 1; 
+  }
+
+  &--grow
+  {
+    flex-grow: 1; 
+  }
+}
+
+.vertical_align
+{
+  &--t
+  {
+    vertical-align: top;  
+  }
+  &--m
+  {
+    vertical-align: middle;
+  }
+  &--b
+  {
+    vertical-align: bottom;
+  }
+}

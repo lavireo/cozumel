@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+
+Un projet par laviréo.
+
+-->
+<html>
+<head>
+
+  <!-- Title -->
+  <title>Cozumel</title>
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Css -->
+  <link rel="stylesheet" href="/{{assetDir}}/master.css">
+
+</head>
+<body>
+
+  <!-- Wrap -->
+  <div class="wrap--m pad--top--l pad--bottom--m">
+    <!-- Head -->
+    <h1 class="c--purple font_size--xxxl">Cozumel</h1>
+
+    <!-- Routes -->
+    <h2 class="font_size--xxl c--darkgrey margin--top--m">Routes</h2>
+    <div>
+      {{#each routes}}
+        <!-- Method and path -->
+        <div class="border margin--top--m">
+          <div class="pad--s pad--top--xs pad--bottom--xs inline">
+            <div class="font_size--s font_weight--600 c--darkgrey pad--right--xs">{{method}}</div>
+            <div class="font_size--s c--purple inline--grow">{{path}}</div>
+            <div class="font_size--s c--green">0ms</div>
+          </div>
+          {{#if params}}
+          <!-- Parameters -->
+          <div class="pad--xs border--top">
+            <ul class="list">
+              {{#each params}}
+                <li class="list--row">
+                  <div class="list--cell pad--xxs c--darkgrey font_size--s">{{name}}</div>
+                  <div class="list--cell pad--xxs list--shrink c--darkgrey font_size--s">{{type}}</div>
+                  <div class="list--cell pad--xxs list--shrink c--darkgrey font_size--s"><strong>{{#if required}}Required{{else}}Optional{{/if}}</strong></div>
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+          {{/if}}
+          <!-- Response -->
+          <div class="pad--xs border--top">
+            {{#with response}}
+              <pre>{{content}}</pre>
+            {{/with}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+
+    <!-- Signature -->
+    <div id="signature" class="margin--top--xl">
+      <div id="signature--love">
+        <a href="https://lavireo.com" target="_blank">Made with <i class="heart"></i> in Germany</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Boot -->
+  <script type="application/javascript" src="/{{assetDir}}/app.js"></script>
+
+</body>
+</html>

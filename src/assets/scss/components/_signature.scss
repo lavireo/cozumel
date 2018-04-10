@@ -1,0 +1,28 @@
+#signature
+{
+  text-align: center;
+
+  &--logo
+  {
+
+  }
+
+  &--love
+  {
+    a,
+    a:hover,
+    a:active {
+      color: #eb4d5c;
+
+      .heart {
+        &:before {
+          content:     '\2665';
+          display:     inline-block;
+          font-size:   20px;
+          font-style:  normal;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.cf:after,
+.cf:before
+{
+  content: '';
+  display: table
+}
+.cf:after
+{
+  clear: both;
+}
+
+
+.hidden { display: none; }
+.drop { margin-bottom: 20px; }
+.tiny_drop { margin-bottom: 10px; }
+
+.box
+{
+  display: block;
+  position: relative;
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: 0 1px rgba(0,0,0,0.1);
+}
+
+.wrapped {
+  margin: 0 auto;
+  padding: 0 40px;
+  max-width: 780px;
+  position: relative;
+}
+

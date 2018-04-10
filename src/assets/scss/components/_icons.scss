@@ -1,0 +1,177 @@
+/* -------------------------------------------------------------------------- */
+/* - Laviréo -> Icons ------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+.icon
+{
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background: url(../img/ui.svg);
+
+
+  &.add
+  {
+    background-position: -66px -88px;
+  }
+  &.signout
+  {
+    background-position: -0px -88px;
+  }
+  &.activate
+  {
+    background-position: -110px -88px;
+  }
+  &.image
+  {
+    width:               26px;
+    height:              26px;
+    background-position: -64px -174px;
+  }
+  &.circle
+  {
+    background-position: -22px -88px;
+  }
+  &.settings
+  {
+    background-position: -44px -88px;
+  }
+  &.mail
+  {
+    background-position: -66px -110px;
+  }
+  &.lock
+  {
+    background-position: -88px -110px;
+  }
+  &.person
+  {
+    background-position: -66px -132px;
+  }
+  &.company
+  {
+    background-position: -88px -132px;
+  }
+  &.website
+  {
+    background-position: -110px -132px;
+  }
+  &.notifications
+  {
+    background-position: -88px -88px;
+  }
+
+  &.logo
+  {
+    width: 30px;
+    height: 30px;
+    background-position: -90px -210px;
+  }
+  &.logo.pride
+  {
+    background-position: -90px -180px;
+  }
+
+  &.ai
+  {
+    background-position: -110px -88px;
+  }
+  &.card
+  {
+    background-position: -22px -110px;
+  }
+  &.paypal
+  {
+    background-position: -44px -110px;
+  }
+
+  &.back
+  {
+    background-position: -22px -154px;
+  }
+  &.close
+  {
+    background-position: 0px -154px;
+  }
+
+  &.desktop
+  {
+    background-position: 0px -176px;
+  }
+  &.mobile
+  {
+    background-position: -22px -176px;
+  }
+
+  &.github
+  {
+    width: 26px;
+    height: 26px;
+    background-position: -94px -61px;
+  }
+  &.twitter
+  {
+    width: 26px;
+    height: 26px;
+    background-position: -94px -87px;
+  }
+  &.facebook
+  {
+    width: 26px;
+    height: 26px;
+    background-position: -94px -139px;
+  }
+  &.instagram
+  {
+    width: 26px;
+    height: 26px;
+    background-position: -94px -113px;
+  }
+
+  &.encryption
+  {
+    background-position: -154px -132px;
+  }
+
+  &.filter
+  {
+    background-position: -132px -154px;
+  }
+  &.export
+  {
+    background-position: -154px -154px;
+  }
+
+
+  &.ilist
+  {
+    background-position: -44px -154px;
+  }
+  &.funnel
+  {
+    background-position: -66px -154px;
+  }
+  &.anomaly_up
+  {
+    background-position: -88px -154px;
+  }
+  &.anomaly_down
+  {
+    background-position: -110px -154px;
+  }
+
+
+  &.thumb_up
+  {
+    width:  10px;
+    height: 17px; 
+    background-position: -116px -180px;
+  }
+  &.thumb_down
+  {
+    width:  10px;
+    height: 17px; 
+    background-position: -138px -180px;
+  }
+}

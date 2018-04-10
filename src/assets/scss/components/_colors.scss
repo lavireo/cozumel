@@ -1,0 +1,61 @@
+$red:            #e8686d;
+$red_dark:       #ce5d61;
+$blue:           #90b3f8;
+$purple:         #6772e5;
+$purple_dark:    #5d67d0;
+$yellow:         #F8B700;
+$yellow_tint:    #fdf4e7;
+$orange:         #ff7849;
+$orange_dark:    #ab5131;
+$green:          #13B57D;
+$green_dark:     #12a974;
+$white:          #ffffff;
+$white_dark:     #f1f5f9;
+$darkgrey:       #33363e;
+$darkgrey_dark:  #27292f;
+$grey:           #828a99;
+$grey_tint:      #fafaff;
+$grey_dark:      #8695a9;
+
+$color-list:
+  red            $red,
+  red_dark       $red_dark,
+  purple         $purple,
+  purple_dark    $purple_dark,
+  yellow         $yellow,
+  yellow_tint    $yellow_tint,
+  orange         $orange,
+  orange_dark    $orange_dark,
+  green          $green,
+  green_dark     $green_dark,
+  white          $white,
+  white_dark     $white_dark,
+  darkgrey       $darkgrey,
+  darkgrey_dark  $darkgrey_dark,
+  grey           $grey,
+  grey_tint      $grey_tint,
+  grey_dark      $grey_dark;
+
+
+@each $value in $color-list {
+  .c--#{'' + nth($value, 1)}
+  {
+    color: #{nth($value, 2)};
+  }
+  .bg--#{'' + nth($value, 1)}
+  {
+    background-color: #{nth($value, 2)};
+  }
+  .bg--#{'' + nth($value, 1)}--active
+  {
+    &:active,
+    &.active
+    {
+      background-color: #{nth($value, 2)};
+    }
+  }
+  .fill--#{'' + nth($value, 1)}
+  {
+    fill: #{nth($value, 2)};
+  }
+}

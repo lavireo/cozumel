@@ -1,0 +1,140 @@
+$modal-sizes:
+  xs 400px,
+  s  500px,
+  m  700px,
+  l  800px,
+  xl 960px;
+
+
+body.modal_open
+{
+  overflow: hidden;
+  position: relative;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* - Laviréo -> Modals ------------------------------------------------------ */
+/* -------------------------------------------------------------------------- */
+.modals
+{
+  top:        0;
+  left:       0;
+  width:      100%;
+  height:     100%;
+  z-index:    100;
+  display:    none;
+  position:   fixed;
+  overflow-y: auto;
+  background-color: #ffffff;
+
+  &.active
+  {
+    display: block;
+  }
+
+  &--wrapper
+  {
+    width:            100%;
+    display:          flex;
+    position:         relative;
+    min-height:       100%;
+    box-sizing:       border-box;
+    align-items:      center;
+    justify-content:  center;
+
+    &--acts
+    {
+      &--back,
+      &--close
+      {
+        width:            22px;
+        height:           22px;
+        cursor:           pointer;
+        padding:          9px;
+        position:         absolute;
+        border-radius:    50%;
+        background-color: #e5e9f2;
+      }
+
+      &--back
+      {
+        top:  30px;
+        left: 40px;
+      }
+
+      &--close
+      {
+        top:   30px;
+        right: 40px;
+      }
+    }
+
+    &--float
+    {
+      width: 100%;
+    }
+  }
+}
+
+
+.modal
+{
+  margin:    0 auto;
+  opacity:   0;
+  position:  relative;
+  //max-width: 420px;
+
+  -webkit-transition: opacity .2s, -webkit-transform .3s cubic-bezier(0.12,0.4,0.29, 1);
+     -moz-transition: opacity .2s,    -moz-transform .3s cubic-bezier(0.12,0.4,0.29, 1);
+       -o-transition: opacity .2s,      -o-transform .3s cubic-bezier(0.12,0.4,0.29, 1);
+          transition: opacity .2s,         transform .3s cubic-bezier(0.12,0.4,0.29, 1);
+
+  -webkit-transform: translate(0, -200px);
+     -moz-transform: translate(0, -200px);
+      -ms-transform: translate(0, -200px);
+          transform: translate(0, -200px);
+
+
+
+  @each $value in $modal-sizes {
+    &--#{nth($value, 1)}
+    {
+      max-width: #{nth($value, 2)};
+    }
+  }
+
+
+  &.active
+  {
+    opacity: 1;
+
+    -webkit-transform: translate(0, 0);
+       -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+
+.modal.dialog
+{
+  text-align: center;
+}
+.modal.dialog .dialog--text
+{
+  color: #4f545c;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.modal.dialog .dialog--buttons
+{
+  height: 44px;
+  margin-top: 32px;
+}
+.modal.dialog .dialog--buttons > .btn
+{
+  margin: 0 5px;
+  min-width: 140px;
+}

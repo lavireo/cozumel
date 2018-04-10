@@ -1,0 +1,43 @@
+#shell
+{
+  background-color: #ffffff;
+}
+
+.shell
+{
+  transition: opacity .1s;
+
+  .head
+  {
+    padding:          60px 0 120px;
+    text-align:       center;
+    background-color: $darkgrey;
+
+    h1
+    {
+      color: #ffffff; 
+    }
+
+    h3
+    {
+      color:       #c4cad1;
+      font-size:   22px;
+      line-height: 28px;
+      padding-top: 10px;
+    }
+  }
+
+  .content
+  {
+    padding-bottom:   25px;
+    background-color: #ffffff;
+
+    .actions
+    {
+      .btn
+      {
+        float: right;
+      }
+    }
+  }
+}

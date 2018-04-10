@@ -1,0 +1,180 @@
+/* -------------------------------------------------------------------------- */
+/* - Laviréo -> Button ------------------------------------------------------ */
+/* -------------------------------------------------------------------------- */
+.btn
+{
+  color:           #ffffff;
+  cursor:          pointer;
+  font-size:       14px;
+  padding:         0 20px;
+  display:         inline-block;
+  box-sizing:      border-box;
+  text-align:      center;
+  font-weight:     600;
+  border-radius:   3px;
+  vertical-align:  middle;
+  text-decoration: none;
+
+  &.symbol
+  {
+    padding:       7px;
+    border-radius: 50%;
+  }
+
+  &.full
+  {
+    width: 100%;
+  }
+
+  &.white { color: #47536B; background: $white; }
+  &.white:active { background: $white_dark; }
+
+  &.primary { background: $purple; }
+  &.primary:active { background: $purple_dark; }
+
+  &.clear { color: #47536B; border: 1px solid #e0e6ed; }
+  &.clear:active { background-color: #f9fafc }
+
+  &.loading,
+  &.disabled,
+  &:disabled
+  {
+    color:            #8492a6;
+    cursor:           default;
+    border:           1px solid #e0e6ed;
+    pointer-events:   none;
+    background-color: #f9fafc;
+  }
+
+  &.loading
+  {
+    position:     relative;
+    padding-left: 40px;
+
+    &:after
+    {
+      top:                13px;
+      left:               13px;
+      width:              14px;
+      height:             14px;
+      margin:             0;
+      content:            "";
+      display:            block;
+      position:           absolute;
+      box-sizing:         border-box;
+      border-width:       2px;
+      border-color:       #8492a6;
+      border-style:       solid;
+      border-radius:      50%;
+      border-right-color: transparent;
+
+      -webkit-transform: translate(0);
+      transform:         translate(0);
+
+      -webkit-animation: spin .8s infinite linear;
+      animation:         spin .8s infinite linear
+    }
+  }
+
+
+  &--s {
+    height:      34px;
+    padding:     0 16px;
+    line-height: 32px;
+
+    &.btn--icon
+    {
+      padding-left: 32px;
+      .icon
+      {
+        left: 8px;  
+      }
+    }
+  }
+
+  &--m {
+    height:      40px;
+    padding:     0 23px;
+    line-height: 38px;
+
+    &.btn--icon
+    {
+      padding-left: 38px;
+      .icon
+      {
+        left: 15px; 
+      }
+    }
+  }
+
+  &--l {
+    height:      46px;
+    padding:     0 30px;
+    font-size:   15px;
+    line-height: 44px;
+
+    &.btn--icon
+    {
+      padding-left: 46px;
+      .icon
+      {
+        left: 22px; 
+      }
+    }
+
+    &.loading
+    {
+      padding-left: 60px;
+      &:after
+      {
+        top: 15px;
+        left: 15px;
+      }
+    }
+  }
+
+
+  &--icon
+  {
+    position: relative; 
+
+    .icon
+    {
+      top:        50%;
+      position:   absolute;
+      margin-top: -11px;
+    }
+  }
+
+  &--group
+  {
+  }
+}
+a.btn
+{
+  text-decoration: none !important
+}
+
+
+@-webkit-keyframes spin
+{
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+@keyframes spin
+{
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}

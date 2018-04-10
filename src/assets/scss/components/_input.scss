@@ -1,0 +1,223 @@
+/* -------------------------------------------------------------------------- */
+/* - Laviréo -> Input ------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+.input
+{
+  width:            100%;
+  height:           40px;
+  font-size:        15px;
+  font-weight:      500;
+  box-sizing:       border-box;
+  border:           1px solid #e0e6ed;
+  border-radius:    3px;
+  vertical-align:   middle;
+  background-color: #fff;
+
+  &:focus
+  {
+    border-color: $blue;
+  }
+
+  &.disabled,
+  &:disabled
+  {
+    color:            #8492a6;
+    cursor:           default;
+    border:           1px solid #e0e6ed;
+    pointer-events:   none;
+    background-color: #f9fafc;
+  }
+
+
+  &--m
+  {
+    padding: 0 14px;
+  }
+
+  &--l
+  {
+    height:  46px;
+    padding: 0 16px;
+  }
+  &--xl
+  {
+    height:  50px;
+    padding: 0 16px;
+  }
+
+
+  &--icon
+  {
+    position: relative;
+
+    .icon
+    {
+      top:            0;
+      left:           0;
+      position:       absolute;
+      pointer-events: none;
+    }
+
+
+    &--m
+    {
+      .icon
+      {
+        margin-top:  18px;
+        margin-left: 18px;
+      }
+
+      .input
+      {
+        padding-left: 38px;
+      }
+    }
+
+    &--l
+    {
+      .icon
+      {
+        margin-top:  16px;
+        margin-left: 16px;
+      }
+
+      .input
+      {
+        padding-left: 44px;
+      }
+    }
+
+    &--xl
+    {
+      .icon
+      {
+        margin-top:  14px;
+        margin-left: 14px;
+      }
+
+      .input
+      {
+        padding-left: 48px;
+      }
+    }
+  }
+
+
+  &--group
+  {
+    font-size:  0;
+    display:    flex;
+    box-sizing: border-box;
+
+    &--ctx
+    {
+      flex:           0;
+      color:          #8492a6;
+      padding:        0 14px;
+      box-sizing:     border-box;
+      border:         1px solid #e0e6ed;
+      border-left:    0;
+      font-size:      15px;
+      font-weight:    500;
+      line-height:    40px;
+      border-radius:  3px;
+    }
+
+    &--l
+    {
+      .input--group--ctx
+      {
+        padding:     0 16px;
+        line-height: 44px;
+      }
+    }
+    &--xl
+    {
+      .input--group--ctx
+      {
+        padding:     0 16px;
+        line-height: 48px;
+      }
+    }
+
+    div
+    {
+      flex: 0;
+    }
+
+    &--grow
+    {
+      flex: 1 !important;
+    }
+
+    div:last-child
+    {
+      .input--group--ctx
+      {
+        border-top-left-radius:    0;
+        border-bottom-left-radius: 0
+      }
+    }
+
+    div:first-child
+    {
+      .input
+      {
+        border-top-right-radius:    0;
+        border-bottom-right-radius: 0
+      }
+    }
+  }
+}
+
+.switch
+{
+  width:    34px;
+  height:   20px;
+  cursor:   pointer;
+  display:  block;
+  position: relative;
+
+  &--input
+  {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+  }
+  &--track
+  {
+    width: 34px;
+    height: 20px;
+    display: block;
+    border-radius: 10px;
+    background: #e0e6ed;
+    transition: background-color .1s ease;
+
+    &--indicator
+    {
+      top: 3px;
+      left: 3px;
+      right: 17px;
+      bottom: 3px;
+      width: 14px;
+      height: 14px;
+      display: block;
+      border-radius: 7px;
+      position: absolute;
+      background: #ffffff;
+      transition: left .1s ease-in-out, right .1s ease-in-out;
+    }
+  }
+
+  &--input:checked ~ &--track
+  {
+    background: $purple;
+
+    .switch--track--indicator
+    {
+      left: 17px;
+      right: 3px;
+    }
+  }
+}
